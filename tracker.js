@@ -1,13 +1,35 @@
-let btn = document.getElementById('btn_count');
-let btn2 = document.getElementById('btn_ctn+5')
-let cnt = document.getElementById('val_count');
+let btn_sun = document.getElementById('btn-sun');
+let sun_val = document.getElementById('sun-value');
 
-btn.addEventListener('click', () => {
-    cnt.innerText = parseInt(cnt.innerText) + 1;
+let btn_water = document.getElementById('btn-water')
+let water_value = document.getElementById('water-value')
+
+let break_btn = document.getElementById('btn-break')
+let break_val = document.getElementById('break-value')
+
+let tt_val = document.getElementById('total-value')
+
+let btn_reset = document.getElementById('btn-reset')
+
+btn_sun.addEventListener('click', () => {
+    sun_val.innerText = parseInt(sun_val.innerText) + 1;
+     tt_val.innerText = parseInt(tt_val.innerText) + 1;
 });
 
-btn2.addEventListener('click', () => {
-    cnt.innerText = parseInt(cnt.innerText) + 5;
+btn_water.addEventListener('click', () => {
+    water_value.innerText = parseInt(water_value.innerText) + 1;
+     tt_val.innerText = parseInt(tt_val.innerText) + 1;
 });
 
-console.log(btn);
+break_btn.addEventListener('click', () => {
+    break_val.innerText = parseInt(break_val.innerText) + 1;
+    tt_val.innerText = parseInt(tt_val.innerText) + 1;
+});
+
+
+btn_reset.addEventListener('click', () => {
+    break_val.innerText = 0 ;
+    sun_val.innerText = 0;
+    water_value.innerText = 0;
+    tt_val.innerText = 0
+});
